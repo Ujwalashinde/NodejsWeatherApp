@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Weather App</title>
+</head>
+
+<body bgcolor="grey">
+    {{>header}}
+
+    <div class="main-container">
+
+        <form class="Formbox" action="/" method="POST">
+            <input id="UserInput" name="location" type="text" placeholder="Enter City/Country">
+            <button id="SearchBtn" type="submit" >SUBMIT</button>
+       </form>
+
+        <div class="weather-container">                       
+            {{country}} <br/> 
+            <h2>{{weather}}</h2>
+             <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="" height="50" width="40">                    
+            {{des}}<br/>
+            {{message}}
+        </div>
+    </div>
+
+    {{>footer}}
+</body>
+
+</html>
